@@ -38,8 +38,6 @@ public class CardService {
 
     public ResponseDto<?> addBalanceToCardId(int card_id, double money) {
         Optional<Card> card = cardRepository.findById(card_id);
-
-        String s;
         if (card.isPresent()){
             Double balance = card.get().getBalance();
             balance = balance + money;
