@@ -20,7 +20,6 @@ public class Card extends Base{
     private String phoneNumber;
     @Column(unique = true, nullable = false)
     private String cardNumber;
-    @Min(1000)
     private Double balance;
 
 }
